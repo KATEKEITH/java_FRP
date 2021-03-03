@@ -1,0 +1,24 @@
+sodium.jar can be built with Java 5 or higher, but it's recommended you use Java 8
+if you can. The lambda syntax makes your FRP code a lot nicer to write.
+
+
+BUILD WITH ANT
+
+Ant targets:
+
+    ant clean   <-- clean all built files
+    ant jar     <-- build sodium/sodium.jar
+    ant tests   <-- build and run the test cases (requires java8 with lambda support)
+
+
+BUILD WITH MAVEN:
+
+    mvn install
+
+
+--- Support for Java 5:
+Only the ant build can build the Java 5 (JDK 1.5) version of the jar file.
+If you don't have Java 8 (JDK 1.8) installed, then to avoid the 1.8 build you'll
+need to type
+
+    ant jar-old
